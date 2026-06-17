@@ -9,8 +9,7 @@ function render() {
     '<div class="main">' +
       renderHeader() +
       '<div class="content">' +
-        renderMetrics() +
-        '<div class="section active" id="sec-overview">' + renderOverview() + '</div>' +
+        '<div class="section active" id="sec-overview">' + renderHero() + renderOverview() + '</div>' +
         '<div class="section" id="sec-experience">' + renderExperience() + '</div>' +
         '<div class="section" id="sec-skills">' + renderSkills() + '</div>' +
         '<div class="section" id="sec-projects">' + renderProjects() + '</div>' +
@@ -63,7 +62,7 @@ function renderHeader() {
   '</header>';
 }
 
-function renderMetrics() {
+function renderHero() {
   var html = '<div class="hero">' +
     '<h1>Hi, I\'m <span class="gradient">' + d.name + '</span></h1>' +
     '<p class="tagline">' + d.tagline + '</p>' +
