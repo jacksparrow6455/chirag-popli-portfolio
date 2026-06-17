@@ -5,7 +5,7 @@ const resumeData = {
   location: "India",
   email: "chiragpopli5621@gmail.com",
   phone: "+91 7015606008",
-  linkedin: "linkedin.com/in/chiragpopli",
+  linkedin: "linkedin.com/in/poplichirag786",
   github: "github.com/jacksparrow6455",
 
   summary: "Assistant Manager with 6 years of experience and a strong foundation in Visual Analytics, Business KPIs, and end-to-end processes including Source-to-Pay (S2P), Supplier Onboarding, Invoicing, Payments etc. Proven track record in designing and implementing robust ETL pipelines, efficient data processing workflows, and insightful dashboards using tools such as Tableau, Tableau Prep, SQL, AWS, and Excel.",
