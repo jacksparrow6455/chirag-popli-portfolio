@@ -78,11 +78,6 @@ function renderHeader() {
   return '<header class="header">' +
     '<button class="hamburger" id="hamburger">\u2630</button>' +
     '<div class="header-title">portfolio<span>.sh</span> ~/<span id="current-section">' + activeSection + '</span></div>' +
-    '<div class="header-metrics" id="header-metrics" style="display:none">' +
-    d.metrics.map(function(m) {
-      return '<span class="header-metric"><span class="header-metric-val">' + m.value + '</span> ' + m.label + '</span>';
-    }).join('') +
-    '</div>' +
     '<div class="header-actions">' +
       '<a href="mailto:' + d.email + '" style="text-decoration:none">' +
         '<button style="padding:6px 16px;background:var(--gradient1);border:none;border-radius:6px;color:white;cursor:pointer;font-size:12px;font-family:var(--font-mono)">\u2709 Contact</button>' +
@@ -222,8 +217,6 @@ function bindEvents() {
       document.querySelectorAll('.section').forEach(function(s) { s.classList.remove('active'); });
       document.getElementById('sec-' + activeSection).classList.add('active');
       document.getElementById('current-section').textContent = activeSection;
-      var hm = document.getElementById('header-metrics');
-      if (hm) hm.style.display = activeSection === 'overview' ? 'none' : 'flex';
       document.getElementById('sidebar').classList.remove('open');
       document.getElementById('overlay').classList.remove('active');
       if (activeSection === 'overview') initCharts();

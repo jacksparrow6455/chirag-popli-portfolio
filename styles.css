@@ -202,33 +202,6 @@ body {
   gap: 12px;
 }
 
-.header-metrics {
-  display: flex;
-  gap: 16px;
-  overflow-x: auto;
-  scrollbar-width: none;
-  flex: 1;
-  margin: 0 16px;
-  padding: 4px 0;
-}
-
-.header-metrics::-webkit-scrollbar {
-  display: none;
-}
-
-.header-metric {
-  white-space: nowrap;
-  font-size: 11px;
-  color: var(--text-muted);
-  font-family: var(--font-mono);
-}
-
-.header-metric-val {
-  color: var(--accent);
-  font-weight: 700;
-  font-size: 13px;
-}
-
 .hamburger {
   display: none;
   background: none;
@@ -846,12 +819,6 @@ body {
     height: auto;
     min-height: var(--header-h);
     padding: 10px 16px;
-    flex-wrap: wrap;
-    gap: 6px;
-  }
-
-  .header-metrics {
-    display: none !important;
   }
 
   .hero h1 {
