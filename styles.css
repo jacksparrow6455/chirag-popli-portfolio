@@ -202,6 +202,33 @@ body {
   gap: 12px;
 }
 
+.header-metrics {
+  display: flex;
+  gap: 16px;
+  overflow-x: auto;
+  scrollbar-width: none;
+  flex: 1;
+  margin: 0 16px;
+  padding: 4px 0;
+}
+
+.header-metrics::-webkit-scrollbar {
+  display: none;
+}
+
+.header-metric {
+  white-space: nowrap;
+  font-size: 11px;
+  color: var(--text-muted);
+  font-family: var(--font-mono);
+}
+
+.header-metric-val {
+  color: var(--accent);
+  font-weight: 700;
+  font-size: 13px;
+}
+
 .hamburger {
   display: none;
   background: none;
@@ -774,6 +801,22 @@ body {
 
   .content {
     padding: 20px 16px;
+  }
+
+  .header {
+    height: auto;
+    min-height: var(--header-h);
+    padding: 10px 16px;
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+
+  .header-metrics {
+    order: 3;
+    width: 100%;
+    margin: 0;
+    padding: 6px 0;
+    border-top: 1px solid var(--border);
   }
 
   .hero h1 {
