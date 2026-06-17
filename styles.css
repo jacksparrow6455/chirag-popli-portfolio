@@ -40,6 +40,8 @@ html {
 body {
   font-family: var(--font-sans);
   background: var(--bg-primary);
+  background-image: radial-gradient(ellipse at 20% 50%, rgba(59, 130, 246, 0.03) 0%, transparent 50%),
+                    radial-gradient(ellipse at 80% 20%, rgba(139, 92, 246, 0.03) 0%, transparent 50%);
   color: var(--text-primary);
   line-height: 1.6;
   overflow-x: hidden;
@@ -122,11 +124,6 @@ body {
   transition: all 0.2s;
   font-size: 14px;
   border-left: 3px solid transparent;
-}
-
-.nav-item:hover {
-  background: rgba(59, 130, 246, 0.08);
-  color: var(--text-primary);
 }
 
 .nav-item.active {
@@ -255,7 +252,7 @@ body {
   border-radius: var(--radius);
   padding: 20px;
   text-align: center;
-  transition: all 0.3s ease;
+  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
   cursor: default;
   position: relative;
   overflow: hidden;
@@ -271,16 +268,6 @@ body {
   background: var(--gradient1);
   opacity: 0;
   transition: opacity 0.3s;
-}
-
-.metric-card:hover {
-  transform: translateY(-4px);
-  border-color: var(--accent);
-  box-shadow: 0 8px 32px var(--accent-glow);
-}
-
-.metric-card:hover::before {
-  opacity: 1;
 }
 
 .metric-icon {
@@ -352,13 +339,8 @@ body {
   border-radius: var(--radius);
   padding: 28px;
   margin-bottom: 20px;
-  transition: all 0.3s;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
   position: relative;
-}
-
-.exp-card:hover {
-  border-color: var(--accent);
-  box-shadow: var(--shadow);
 }
 
 .exp-card-header {
@@ -404,6 +386,13 @@ body {
   font-size: 16px;
   color: var(--accent);
   font-weight: 600;
+}
+
+.exp-client {
+  font-size: 13px;
+  color: var(--text-muted);
+  font-family: var(--font-mono);
+  margin-top: 4px;
 }
 
 .exp-meta {
@@ -474,12 +463,7 @@ body {
   border: 1px solid var(--border);
   border-radius: var(--radius);
   padding: 24px;
-  transition: all 0.3s;
-}
-
-.skill-group:hover {
-  border-color: var(--accent);
-  box-shadow: var(--shadow);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .skill-group-title {
@@ -579,7 +563,6 @@ body {
   transition: all 0.2s;
 }
 
-.filter-btn:hover,
 .filter-btn.active {
   background: rgba(59, 130, 246, 0.15);
   border-color: var(--accent);
@@ -597,14 +580,8 @@ body {
   border: 1px solid var(--border);
   border-radius: var(--radius);
   padding: 24px;
-  transition: all 0.3s;
+  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
   cursor: default;
-}
-
-.project-card:hover {
-  transform: translateY(-4px);
-  border-color: var(--accent);
-  box-shadow: 0 8px 32px var(--accent-glow);
 }
 
 .project-title {
@@ -654,11 +631,7 @@ body {
   border: 1px solid var(--border);
   border-radius: var(--radius);
   padding: 20px 24px;
-  transition: all 0.3s;
-}
-
-.edu-item:hover {
-  border-color: var(--accent);
+  transition: border-color 0.3s ease;
 }
 
 .edu-item::before {
@@ -713,12 +686,7 @@ body {
   border-radius: var(--radius-sm);
   font-size: 13px;
   color: var(--text-secondary);
-  transition: all 0.3s;
-}
-
-.cert-item:hover {
-  border-color: var(--accent4);
-  color: var(--text-primary);
+  transition: border-color 0.3s ease, color 0.3s ease;
 }
 
 .cert-icon {
@@ -746,14 +714,8 @@ body {
   border-radius: var(--radius);
   padding: 24px;
   text-align: center;
-  transition: all 0.3s;
+  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
   cursor: pointer;
-}
-
-.contact-card:hover {
-  border-color: var(--accent);
-  transform: translateY(-4px);
-  box-shadow: 0 8px 32px var(--accent-glow);
 }
 
 .contact-icon {
@@ -898,5 +860,69 @@ body {
 
   .cert-icon {
     font-size: 24px;
+  }
+
+  .nav-item {
+    min-height: 44px;
+    padding: 12px 20px;
+  }
+
+  .filter-btn {
+    min-height: 36px;
+    padding: 8px 14px;
+  }
+
+  .contact-card {
+    min-height: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+@media (hover: hover) {
+  .nav-item:hover {
+    background: rgba(59, 130, 246, 0.08);
+    color: var(--text-primary);
+  }
+  .metric-card:hover {
+    transform: translateY(-4px);
+    border-color: var(--accent);
+    box-shadow: 0 8px 32px var(--accent-glow);
+  }
+  .metric-card:hover::before {
+    opacity: 1;
+  }
+  .exp-card:hover {
+    border-color: var(--accent);
+    box-shadow: var(--shadow);
+  }
+  .skill-group:hover {
+    border-color: var(--accent);
+    box-shadow: var(--shadow);
+  }
+  .filter-btn:hover,
+  .filter-btn.active {
+    background: rgba(59, 130, 246, 0.15);
+    border-color: var(--accent);
+    color: var(--accent);
+  }
+  .project-card:hover {
+    transform: translateY(-4px);
+    border-color: var(--accent);
+    box-shadow: 0 8px 32px var(--accent-glow);
+  }
+  .edu-item:hover {
+    border-color: var(--accent);
+  }
+  .cert-item:hover {
+    border-color: var(--accent4);
+    color: var(--text-primary);
+  }
+  .contact-card:hover {
+    border-color: var(--accent);
+    transform: translateY(-4px);
+    box-shadow: 0 8px 32px var(--accent-glow);
   }
 }
