@@ -207,7 +207,7 @@ function renderContact() {
   return '<div class="section-header"><div class="section-icon">\u{1F4EC}</div><h2 class="section-title">Get in Touch</h2></div>' +
     '<div class="contact-grid">' +
       '<div class="contact-card" onclick="window.open(\'mailto:' + d.email + '\')"><div class="contact-icon">\u2709</div><div class="contact-label">Email</div><div class="contact-value">' + d.email + '</div></div>' +
-      '<div class="contact-card" onclick="window.open(\'https://' + d.linkedin + '\', \'_blank\')"><div class="contact-icon">\u{1F517}</div><div class="contact-label">LinkedIn</div><div class="contact-value">poplichirag786</div></div>' +
+      '<div class="contact-card" onclick="window.open(\'https://' + d.linkedin + '\', \'_blank\')"><div class="contact-icon">\u{1F517}</div><div class="contact-label">LinkedIn</div><div class="contact-value">Connect</div></div>' +
       '<div class="contact-card" onclick="window.open(\'https://' + d.github + '\', \'_blank\')"><div class="contact-icon">\u{1F4BB}</div><div class="contact-label">GitHub</div><div class="contact-value">' + d.github + '</div></div>' +
       '<div class="contact-card"><div class="contact-icon">\u{1F4CD}</div><div class="contact-label">Location</div><div class="contact-value">' + d.location + '</div></div>' +
     '</div>';
