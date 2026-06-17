@@ -310,6 +310,11 @@ body {
   opacity: 1;
 }
 
+.metric-icon {
+  font-size: 24px;
+  margin-bottom: 8px;
+}
+
 .metric-value {
   font-size: 32px;
   font-weight: 700;
@@ -392,6 +397,31 @@ body {
   gap: 8px;
 }
 
+.exp-card-title-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.company-badge {
+  width: 48px;
+  height: 48px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 14px;
+  font-family: var(--font-mono);
+  flex-shrink: 0;
+  letter-spacing: -0.5px;
+}
+
+.exp-card-title-text {
+  display: flex;
+  flex-direction: column;
+}
+
 .exp-role {
   font-size: 20px;
   font-weight: 700;
@@ -448,6 +478,15 @@ body {
   font-size: 11px;
   color: var(--accent);
   font-family: var(--font-mono);
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.tech-icon {
+  width: 14px;
+  height: 14px;
+  filter: brightness(0) saturate(100%) invert(62%) sepia(45%) saturate(500%) hue-rotate(200deg);
 }
 
 /* ─── Skills Section ─── */

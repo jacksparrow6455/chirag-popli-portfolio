@@ -175,5 +175,54 @@ const resumeData = {
     { label: "Client Appreciations", value: "4+" },
     { label: "Awards Won", value: "3+" },
     { label: "Cross-Functional Teams", value: "15+" }
-  ]
+  ],
+
+  skillIcons: {
+    "tableau": "tableau",
+    "coupa": "coupa",
+    "crm analytics": "salesforce",
+    "power bi": "powerbi",
+    "sql": "postgresql",
+    "python": "python",
+    "etl": "apacheairflow",
+    "a/b testing": "googleanalytics",
+    "fraud detection": "chart",
+    "data warehouse": "snowflake",
+    "aws": "amazon",
+    "snowflake": "snowflake",
+    "domino": "jupyter",
+    "microsoft excel": "microsoftexcel",
+    "power automate": "microsoftpowerautomate",
+    "reporting": "googledatastudio",
+    "source-to-pay": "coupa",
+    "cross-functional": "people",
+    "procurement": "shopify",
+    "supplier onboarding": "trello",
+    "leadership": "medal",
+    "advanced sql": "postgresql",
+    "python (pandas, numpy)": "python",
+    "etl / data pipelines": "apacheairflow",
+    "a/b testing & experimentation": "googleanalytics",
+    "fraud detection & analysis": "chart",
+    "data warehouse design": "snowflake",
+    "aws (s3, redshift, lambda)": "amazon",
+    "microsoft excel (advanced)": "microsoftexcel",
+    "reporting & automation": "googledatastudio",
+    "source-to-pay (s2p) process": "coupa",
+    "cross-functional collaboration": "people",
+    "procurement analytics": "shopify",
+    "supplier onboarding & invoicing": "trello",
+    "leadership demos & training": "medal",
+    "tableau (desktop, server, prep)": "tableau",
+    "crm analytics (salesforce)": "salesforce",
+    "coupa analytics": "coupa",
+    "power bi": "powerbi"
+  },
+
+  companyColors: {
+    "Ernst & Young": { bg: "#262261", color: "#fff", abbr: "EY" },
+    "Accenture": { bg: "#A100FF", color: "#fff", abbr: "ACN" },
+    "Pocket52": { bg: "#FF6B00", color: "#fff", abbr: "P52" },
+    "PlaySimple Games": { bg: "#00C853", color: "#fff", abbr: "PSG" }
+  }
 };

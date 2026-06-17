@@ -2,6 +2,30 @@ const d = resumeData;
 let activeSection = 'overview';
 let charts = {};
 
+function skillIconUrl(name) {
+  var slug = d.skillIcons[name.toLowerCase()] || null;
+  if (!slug) return null;
+  return 'https://cdn.simpleicons.org/' + slug + '/8b9dc3';
+}
+
+function companyBadge(company) {
+  var c = d.companyColors[company];
+  if (!c) return '';
+  return '<span class="company-badge" style="background:' + c.bg + ';color:' + c.color + '">' + c.abbr + '</span>';
+}
+
+function metricIcon(label) {
+  var icons = {
+    'Years Experience': '\u{1F4C5}',
+    'Dashboards Built': '\u{1F4CA}',
+    'Reports Automated': '\u{2699}',
+    'Client Appreciations': '\u{1F31F}',
+    'Awards Won': '\u{1F3C6}',
+    'Cross-Functional Teams': '\u{1F91D}'
+  };
+  return icons[label] || '';
+}
+
 function render() {
   var app = document.getElementById('app');
   app.innerHTML = '<div class="overlay" id="overlay"></div>' +
@@ -75,6 +99,7 @@ function renderHero() {
   '<div class="metrics-grid">';
   d.metrics.forEach(function(m) {
     html += '<div class="metric-card">' +
+      '<div class="metric-icon">' + metricIcon(m.label) + '</div>' +
       '<div class="metric-value" data-count="' + m.value + '">' + m.value + '</div>' +
       '<div class="metric-label">' + m.label + '</div>' +
     '</div>';
@@ -101,10 +126,13 @@ function renderOverview() {
 function renderExperience() {
   var html = '<div class="section-header"><div class="section-icon">\u{1F4BC}</div><h2 class="section-title">Experience</h2></div>';
   d.experience.forEach(function(exp) {
-    html += '<div class="exp-card"><div class="exp-card-header"><div>' +
+    html += '<div class="exp-card"><div class="exp-card-header"><div class="exp-card-title-row">' +
+      companyBadge(exp.company) +
+      '<div class="exp-card-title-text">' +
       '<div class="exp-role">' + exp.role + '</div>' +
       '<div class="exp-company">' + exp.company + '</div>' +
       (exp.client ? '<div class="exp-client" style="font-size:13px;color:var(--text-muted);font-family:var(--font-mono);margin-top:4px">Client: ' + exp.client + '</div>' : '') +
+      '</div>' +
     '</div><div class="exp-meta">' + exp.period + '</div></div>' +
     '<ul class="exp-achievements">';
     exp.achievements.forEach(function(a) {
@@ -112,7 +140,8 @@ function renderExperience() {
     });
     html += '</ul><div class="exp-tech">';
     exp.tech.forEach(function(t) {
-      html += '<span class="tech-tag">' + t + '</span>';
+      var icon = skillIconUrl(t);
+      html += '<span class="tech-tag">' + (icon ? '<img src="' + icon + '" alt="" class="tech-icon"> ' : '') + t + '</span>';
     });
     html += '</div></div>';
   });
@@ -151,7 +180,8 @@ function renderProjects() {
       '<div class="project-impact">Impact: ' + p.impact + '</div>' +
       '<div class="exp-tech">';
     p.tech.forEach(function(t) {
-      html += '<span class="tech-tag">' + t + '</span>';
+      var icon = skillIconUrl(t);
+      html += '<span class="tech-tag">' + (icon ? '<img src="' + icon + '" alt="" class="tech-icon"> ' : '') + t + '</span>';
     });
     html += '</div></div>';
   });
