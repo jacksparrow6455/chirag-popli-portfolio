@@ -34,7 +34,7 @@ function renderSidebar() {
   ];
   var html = '<aside class="sidebar" id="sidebar">' +
     '<div class="sidebar-header">' +
-      '<div class="sidebar-avatar">' + d.name.split(' ').map(function(n){return n[0]}).join('') + '</div>' +
+      '<div class="sidebar-avatar" style="overflow:hidden"><img src="avatar.png" alt="' + d.name + '" style="width:100%;height:100%;object-fit:cover;border-radius:50%"></div>' +
       '<div class="sidebar-name">' + d.name + '</div>' +
       '<div class="sidebar-role">' + d.title + '</div>' +
     '</div>' +
