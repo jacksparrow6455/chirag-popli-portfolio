@@ -1,6 +1,6 @@
 const resumeData = {
   name: "Chirag Popli",
-  title: "Senior Data Consultant",
+  title: "Assistant Manager",
   tagline: "Turning data into decisions. Building dashboards that drive strategy.",
   location: "India",
   email: "chiragpopli5621@gmail.com",
@@ -8,7 +8,7 @@ const resumeData = {
   linkedin: "linkedin.com/in/chiragpopli",
   github: "github.com/jacksparrow6455",
 
-  summary: "Senior Data Consultant with 6 years of experience and a strong foundation in Visual Analytics, Business KPIs, and end-to-end processes including Source-to-Pay (S2P), Supplier Onboarding, Invoicing, Payments etc. Proven track record in designing and implementing robust ETL pipelines, efficient data processing workflows, and insightful dashboards using tools such as Tableau, Tableau Prep, SQL, AWS, and Excel.",
+  summary: "Assistant Manager with 6 years of experience and a strong foundation in Visual Analytics, Business KPIs, and end-to-end processes including Source-to-Pay (S2P), Supplier Onboarding, Invoicing, Payments etc. Proven track record in designing and implementing robust ETL pipelines, efficient data processing workflows, and insightful dashboards using tools such as Tableau, Tableau Prep, SQL, AWS, and Excel.",
 
   skills: {
     "Data Visualization": [
@@ -46,7 +46,7 @@ const resumeData = {
   experience: [
     {
       company: "Ernst & Young LLP",
-      role: "Senior Consultant",
+      role: "Assistant Manager",
       period: "Jun 2024 – Present",
       client: "Boston Consulting Group (BCG)",
       achievements: [

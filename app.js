@@ -294,7 +294,7 @@ function initCharts() {
       { label: '2019 - PlaySimple Games', y: 1 },
       { label: '2020 - Pocket52', y: 0 },
       { label: '2021 - Accenture', y: 1 },
-      { label: '2024 - EY (Senior Consultant)', y: 0 }
+      { label: '2024 - EY (Assistant Manager)', y: 0 }
     ];
     charts.timeline = new Chart(timeline, {
       type: 'scatter',
